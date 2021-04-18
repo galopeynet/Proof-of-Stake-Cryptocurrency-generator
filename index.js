@@ -319,6 +319,11 @@ inquirer.prompt(questions).then(answers => {
             from: '7876',
             to: answers.api_server_port
           });
+		  const changes27s = replace.sync({
+            files: 'build_tools/installer/shortcutSpec.xml',
+            from: '7876',
+            to: answers.api_server_ssl_port
+          });
           const changes28 = replace.sync({
             files: 'build_tools/installer/shortcutSpec.xml',
             from: [/NXT/g, /Nxt/g, /nxt/g],
@@ -378,6 +383,7 @@ inquirer.prompt(questions).then(answers => {
           console.log('Modified files:', changes25.join(', '));
           console.log('Modified files:', changes26.join(', '));
           console.log('Modified files:', changes27.join(', '));
+		  console.log('Modified files:', changes27s.join(', '));
           console.log('Modified files:', changes28.join(', '));
           console.log('Modified files:', changes28.join(', '));
           console.log('Modified files:', changes29.join(', '));
@@ -398,10 +404,20 @@ inquirer.prompt(questions).then(answers => {
               from: /7876/g,
               to: answers.api_server_port
             });
+			const changes34s = replace.sync({
+              files: 'doc/api_examples.html',
+              from: /7876/g,
+              to: answers.api_server_ssl_port
+            });
             const changes35 = replace.sync({
               files: 'doc/api.html',
               from: /7876/g,
               to: answers.api_server_port
+            });
+			 const changes35s = replace.sync({
+              files: 'doc/api.html',
+              from: /7876/g,
+              to: answers.api_server_ssl_port
             });
             const changes36 = replace.sync({
               files: 'doc/api_examples.html',
@@ -435,7 +451,9 @@ inquirer.prompt(questions).then(answers => {
             });
 
             console.log('Modified files:', changes34.join(', '));
+			console.log('Modified files:', changes34s.join(', '));
             console.log('Modified files:', changes35.join(', '));
+			console.log('Modified files:', changes35s.join(', '));
             console.log('Modified files:', changes36.join(', '));
             console.log('Modified files:', changes37.join(', '));
             console.log('Modified files:', changes38.join(', '));
