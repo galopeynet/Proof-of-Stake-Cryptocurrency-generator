@@ -107,8 +107,8 @@ inquirer.prompt(questions).then(answers => {
   const folderName = answers.application;
   const appName = answers.application;
   const repositoryOfficial = 'https://bitbucket.org/Jelurida/nxt-clone-starter';
-  const repositorySandoche = 'https://github.com/sandoche/nxt-clone-starter';
-  const source = answers.source === 'v1.11.15' ? repositorySandoche : repositoryOfficial;
+  const repositoryGalopeynet = 'https://github.com/galopeynet/nxt-clone-starter';
+  const source = answers.source === 'v1.11.15' ? repositoryGalopeynet : repositoryOfficial;
 
   console.log('1. Cloning the nxt-clone-starter')
   const getAsync = Promise.promisify(cmd.get, { multiArgs: true, context: cmd });
@@ -171,7 +171,7 @@ inquirer.prompt(questions).then(answers => {
 	   const changes8s = replace.sync({
         files: folderName + '/Wallet.url',
         from: '7876',
-        to: answers.api_server_ssl_portport
+        to: answers.api_server_ssl_port
       });
       const changes9 = replace.sync({
         files: folderName + '/conf/nxt-default.properties',
