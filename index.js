@@ -79,6 +79,17 @@ var questions = [
       return 'Please enter a number between 1000 and 65535';
     }
   },
+   {
+    type: 'input',
+    name: 'api_server_ssl_port',
+    message: 'API server ssl port (example: 6876)',
+    validate: function(value) {
+      if(value >= 1000 && value <= 65535) {
+        return true;
+      }
+      return 'Please enter a number between 1000 and 65535';
+    }
+  },
   {
     type: 'input',
     name: 'website',
@@ -142,6 +153,11 @@ inquirer.prompt(questions).then(answers => {
         from: '7876',
         to: answers.api_server_port
       });
+	  const changes7s = replace.sync({
+        files: folderName + '/contrib/Dockerfile',
+        from: '7876',
+        to: answers.api_server_ssl_port
+      });
       const changes7b = replace.sync({
         files: folderName + '/contrib/Dockerfile',
         from: '7874',
@@ -151,6 +167,11 @@ inquirer.prompt(questions).then(answers => {
         files: folderName + '/Wallet.url',
         from: '7876',
         to: answers.api_server_port
+      });
+	   const changes8s = replace.sync({
+        files: folderName + '/Wallet.url',
+        from: '7876',
+        to: answers.api_server_ssl_portport
       });
       const changes9 = replace.sync({
         files: folderName + '/conf/nxt-default.properties',
@@ -162,6 +183,11 @@ inquirer.prompt(questions).then(answers => {
         from: '7876',
         to: answers.api_server_port
       });
+	  const changes10s = replace.sync({
+        files: folderName + '/conf/nxt-default.properties',
+        from: '7876',
+        to: answers.api_server_ssl_port
+      });
       console.log('Modified files:', changes1.join(', '));
       console.log('Modified files:', changes2.join(', '));
       console.log('Modified files:', changes3.join(', '));
@@ -169,11 +195,14 @@ inquirer.prompt(questions).then(answers => {
       console.log('Modified files:', changes5.join(', '));
       console.log('Modified files:', changes6.join(', '));
       console.log('Modified files:', changes7.join(', '));
+	  console.log('Modified files:', changes7s.join(', '));
       console.log('Modified files:', changes7b.join(', '));
       console.log('Modified files:', changes8.join(', '));
+	  console.log('Modified files:', changes8s.join(', '));
       console.log('Modified files:', changes8.join(', '));
       console.log('Modified files:', changes9.join(', '));
       console.log('Modified files:', changes10.join(', '));
+	  console.log('Modified files:', changes10s.join(', '));
 
       console.log('');
       console.log('3. Copying assets, and genesis files');

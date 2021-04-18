@@ -29,9 +29,12 @@
   },
   "homepage": "https://github.com/sandoche/Proof-of-Stake-Cryptocurrency-generator#readme",
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "inquirer": "^5.1.0",
-    "node-cmd": "^3.0.0",
-    "replace-in-file": "^3.4.0"
+    "bluebird": "^3.7.2",
+    "inquirer": "^8.0.0",
+    "node-cmd": "^4.0.0",
+	"replace-in-file": "^6.2.0",
+    "object.assign": "^4.1.2",
+    "object.values": "^1.1.3"
+    
   }
 }
