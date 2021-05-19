@@ -14,13 +14,13 @@
     ]
   ],
   "_from": "crypto-js@latest",
-  "_id": "crypto-js@3.1.9-1",
+  "_id": "crypto-js@3.2.1,
   "_inCache": true,
   "_location": "/crypto-js",
   "_nodeVersion": "6.9.1",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/crypto-js-3.1.9-1.tgz_1481717192265_0.6456991981249303"
+    "tmp": "tmp/crypto-js-3.2.1.tgz_1481717192265_0.6456991981249303"
   },
   "_npmUser": {
     "name": "evanvosberg",
@@ -40,7 +40,7 @@
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "https://registry.npmjs.org/crypto-js/-/crypto-js-3.1.9-1.tgz",
+  "_resolved": "https://registry.npmjs.org/crypto-js/-/crypto-js-3.2.1.tgz",
   "_shasum": "fda19e761fc077e01ffbfdc6e9fdfc59e8806cd8",
   "_shrinkwrap": null,
   "_spec": "crypto-js",
@@ -58,7 +58,7 @@
   "directories": {},
   "dist": {
     "shasum": "fda19e761fc077e01ffbfdc6e9fdfc59e8806cd8",
-    "tarball": "https://registry.npmjs.org/crypto-js/-/crypto-js-3.1.9-1.tgz"
+    "tarball": "https://registry.npmjs.org/crypto-js/-/crypto-js-3.2.1.tgz"
   },
   "homepage": "http://github.com/brix/crypto-js",
   "keywords": [
@@ -98,5 +98,5 @@
     "url": "git+ssh://git@github.com/brix/crypto-js.git"
   },
   "scripts": {},
-  "version": "3.1.9-1"
+  "version": "crypto-js@3.2.1"
 }
